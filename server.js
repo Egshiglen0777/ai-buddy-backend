@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-app.use(cors()); // Allow frontend to hit this
+app.use(cors()); // Allow Carrd embed to hit this
 app.use(express.json()); // Parse JSON bodies
 
 app.post("/chat", (req, res) => {
@@ -11,7 +11,7 @@ app.post("/chat", (req, res) => {
     return res.status(400).json({ detail: "No input, little buddy!" });
   }
 
-  // Placeholder AI response (replace this with real AI later if you want)
+  // Placeholder AI response (replace with real AI later if you want)
   const aiResponse = `Hey cutie pie! You said "${userInput}"—so cool! 😊 What’s next?`;
   res.json({ response: aiResponse });
 });
